@@ -3,11 +3,11 @@
 ### Workflow:
 
 1. Download ITN maps from [https://digimap.edina.ac.uk/roam/download/os](https://digimap.edina.ac.uk/roam/download/os)
-  1. (optional) Download topography maps (separate folder)
+    - (optional) Download topography maps (separate folder)
 2. Place the downloaded files (itn.gml and itnpaths.gml) in the same folder as the python scripts
 3. Run itnparsing.py to consolidate the gml files and generate output files (itnout.gml and itnpathsout.gml)
 4. Run buffer.py to generate the buffer around the roads and paths (as shapefiles, exported in &#39;Output&#39; folder)
-5. 5)Import consolidated ITN GML files (or topography maps) and Buffer shapefiles to QGIS using the &quot;add vector layer&quot; function
+5. Import consolidated ITN GML files (or topography maps) and Buffer shapefiles to QGIS using the &quot;add vector layer&quot; function
 
 Notes:
 
