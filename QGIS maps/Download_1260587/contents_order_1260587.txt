@@ -1,0 +1,47 @@
+********************************************************************
+
+EDINA DIGIMAP:
+
+DIGITAL DATA SUPPLY
+
+********************************************************************
+
+
+This data is distributed under licence by:
+
+    EDINA
+    University of Edinburgh
+    https://edina.ac.uk
+
+    Tel:    0131 650 3302
+    Fax:    0131 650 3308
+    Email:  digimap@ed.ac.uk
+		
+
+
+---------------------------------------------------------
+
+CONTENTS
+
+You will have received the data files listed below, each product and area has
+its own folder. Note that each data folder contains a conditions.txt file
+which states the conditions for use of the data within. These conditions can
+vary between different data products.
+
+
+
+-------------------------------------------------------------------------------
+Folder:           vml_3012454
+Extent:           356325.20164920925, 172955.81625567714 - 356616.45164920925, 173209.56625567714
+Date Ordered:     7 June 2019 at 17:25:29
+Product:          OS VectorMap® Local
+Version:          July 2018
+Format:           SHAPE
+Theme:            N/A
+Area:             1 tiles
+Tiles:
+ 
+Tile Name:        st57se
+Extent:           355000.0, 170000.0 - 360000.0, 175000.0
+Last Amended:     27 January 2018
+     

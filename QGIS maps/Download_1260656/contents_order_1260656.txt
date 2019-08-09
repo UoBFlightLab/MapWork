@@ -1,0 +1,53 @@
+********************************************************************
+
+EDINA DIGIMAP:
+
+DIGITAL DATA SUPPLY
+
+********************************************************************
+
+
+This data is distributed under licence by:
+
+    EDINA
+    University of Edinburgh
+    https://edina.ac.uk
+
+    Tel:    0131 650 3302
+    Fax:    0131 650 3308
+    Email:  digimap@ed.ac.uk
+		
+
+
+---------------------------------------------------------
+
+CONTENTS
+
+You will have received the data files listed below, each product and area has
+its own folder. Note that each data folder contains a conditions.txt file
+which states the conditions for use of the data within. These conditions can
+vary between different data products.
+
+
+
+-------------------------------------------------------------------------------
+Folder:           mastermap_1_to_1000_3012592
+Extent:           356210.46330425685, 172992.6979760015 - 356701.71330425685, 173280.5104760015
+Date Ordered:     8 June 2019 at 13:35:27
+Product:          OS MasterMap® Topography Layer
+Version:          May 2017
+Format:           TIFF
+Theme:            N/A
+Area:             2 tiles
+Tiles:
+ 
+Tile Name:        st5672_clipped
+Extent:           356210.46330425685, 172992.6979760015 - 356701.71330425685, 173000.0
+Last Amended:     18 May 2017
+  
+Tile Name:        st5673_clipped
+Extent:           356210.46330425685, 173000.0 - 356701.71330425685, 173280.5104760015
+Last Amended:     18 May 2017
+  
+The tiles listed above have been combined to create mastermap_1250_3012592.tif.
+   

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="all_waypoints_wgs84_kml" id="all_waypoints_wgs84_kml">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="area" type="float"></SimpleField>
+	<SimpleField name="perim" type="float"></SimpleField>
+	<SimpleField name="alt" type="float"></SimpleField>
+	<SimpleField name="lon" type="float"></SimpleField>
+	<SimpleField name="lat" type="float"></SimpleField>
+	<SimpleField name="instr" type="string"></SimpleField>
+	<SimpleField name="lbl_ofs_x" type="float"></SimpleField>
+	<SimpleField name="lbl_ofs_y" type="float"></SimpleField>
+</Schema>
+<Folder><name>all_waypoints_wgs84_kml</name>
+  <Placemark>
+	<name>HOMER</name>
+	<ExtendedData><SchemaData schemaUrl="#all_waypoints_wgs84_kml">
+		<SimpleData name="id">1</SimpleData>
+		<SimpleData name="area">0.000000000000000</SimpleData>
+		<SimpleData name="perim">0.000000000000000</SimpleData>
+		<SimpleData name="alt">0.0</SimpleData>
+		<SimpleData name="lon">-2.629035</SimpleData>
+		<SimpleData name="lat">51.454404</SimpleData>
+		<SimpleData name="instr">_</SimpleData>
+		<SimpleData name="lbl_ofs_x">-25.0</SimpleData>
+		<SimpleData name="lbl_ofs_y">0.0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-2.62903471813479,51.454404265418546</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SAFTI</name>
+	<ExtendedData><SchemaData schemaUrl="#all_waypoints_wgs84_kml">
+		<SimpleData name="id">3</SimpleData>
+		<SimpleData name="alt">0.0</SimpleData>
+		<SimpleData name="lon">-2.627748</SimpleData>
+		<SimpleData name="lat">51.454517</SimpleData>
+		<SimpleData name="instr">Verify EKF, RTK, comms</SimpleData>
+		<SimpleData name="lbl_ofs_x">25.0</SimpleData>
+		<SimpleData name="lbl_ofs_y">-11.0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-2.627748292113758,51.454516934535505</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>TESTA</name>
+	<ExtendedData><SchemaData schemaUrl="#all_waypoints_wgs84_kml">
+		<SimpleData name="id">2</SimpleData>
+		<SimpleData name="area">0.000000000000000</SimpleData>
+		<SimpleData name="perim">0.000000000000000</SimpleData>
+		<SimpleData name="alt">5.0</SimpleData>
+		<SimpleData name="lon">-2.628870</SimpleData>
+		<SimpleData name="lat">51.454333</SimpleData>
+		<SimpleData name="instr">Verify EKF and RTK</SimpleData>
+		<SimpleData name="lbl_ofs_x">-21.0</SimpleData>
+		<SimpleData name="lbl_ofs_y">11.0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-2.628870055650785,51.454332646152139</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ALPHA</name>
+	<ExtendedData><SchemaData schemaUrl="#all_waypoints_wgs84_kml">
+		<SimpleData name="id">6</SimpleData>
+		<SimpleData name="area">0.000000000000000</SimpleData>
+		<SimpleData name="perim">0.000000000000000</SimpleData>
+		<SimpleData name="alt">-1.8</SimpleData>
+		<SimpleData name="lon">-2.627926</SimpleData>
+		<SimpleData name="lat">51.454792</SimpleData>
+		<SimpleData name="instr">_</SimpleData>
+		<SimpleData name="lbl_ofs_x">-25.0</SimpleData>
+		<SimpleData name="lbl_ofs_y">-11.0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-2.627926041389736,51.454791936160596</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>BRAVO</name>
+	<ExtendedData><SchemaData schemaUrl="#all_waypoints_wgs84_kml">
+		<SimpleData name="id">7</SimpleData>
+		<SimpleData name="area">0.000000000000000</SimpleData>
+		<SimpleData name="perim">0.000000000000000</SimpleData>
+		<SimpleData name="alt">-1.7</SimpleData>
+		<SimpleData name="lon">-2.628132</SimpleData>
+		<SimpleData name="lat">51.454712</SimpleData>
+		<SimpleData name="instr">_</SimpleData>
+		<SimpleData name="lbl_ofs_x">-25.0</SimpleData>
+		<SimpleData name="lbl_ofs_y">-11.0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-2.628131693682806,51.454711789003476</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>CHALI</name>
+	<ExtendedData><SchemaData schemaUrl="#all_waypoints_wgs84_kml">
+		<SimpleData name="id">8</SimpleData>
+		<SimpleData name="area">0.000000000000000</SimpleData>
+		<SimpleData name="perim">0.000000000000000</SimpleData>
+		<SimpleData name="alt">-1.5</SimpleData>
+		<SimpleData name="lon">-2.628340</SimpleData>
+		<SimpleData name="lat">51.454632</SimpleData>
+		<SimpleData name="instr">_</SimpleData>
+		<SimpleData name="lbl_ofs_x">-25.0</SimpleData>
+		<SimpleData name="lbl_ofs_y">-11.0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-2.628340430877514,51.454631624944625</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>DELTA</name>
+	<ExtendedData><SchemaData schemaUrl="#all_waypoints_wgs84_kml">
+		<SimpleData name="id">9</SimpleData>
+		<SimpleData name="area">0.000000000000000</SimpleData>
+		<SimpleData name="perim">0.000000000000000</SimpleData>
+		<SimpleData name="alt">-1.0</SimpleData>
+		<SimpleData name="lon">-2.628561</SimpleData>
+		<SimpleData name="lat">51.454549</SimpleData>
+		<SimpleData name="instr">_</SimpleData>
+		<SimpleData name="lbl_ofs_x">-25.0</SimpleData>
+		<SimpleData name="lbl_ofs_y">-11.0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-2.628561483325085,51.454549466534033</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ECKOH</name>
+	<ExtendedData><SchemaData schemaUrl="#all_waypoints_wgs84_kml">
+		<SimpleData name="id">10</SimpleData>
+		<SimpleData name="area">0.000000000000000</SimpleData>
+		<SimpleData name="perim">0.000000000000000</SimpleData>
+		<SimpleData name="alt">0.0</SimpleData>
+		<SimpleData name="lon">-2.628819</SimpleData>
+		<SimpleData name="lat">51.454452</SimpleData>
+		<SimpleData name="instr">_</SimpleData>
+		<SimpleData name="lbl_ofs_x">-25.0</SimpleData>
+		<SimpleData name="lbl_ofs_y">-11.0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-2.628819350343311,51.454451686741201</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>TWENI</name>
+	<ExtendedData><SchemaData schemaUrl="#all_waypoints_wgs84_kml">
+		<SimpleData name="id">4</SimpleData>
+		<SimpleData name="alt">0.0</SimpleData>
+		<SimpleData name="lon">-2.627818</SimpleData>
+		<SimpleData name="lat">51.454625</SimpleData>
+		<SimpleData name="instr">Verify 15&lt;R&lt;30</SimpleData>
+		<SimpleData name="lbl_ofs_x">25.0</SimpleData>
+		<SimpleData name="lbl_ofs_y">-11.0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-2.627818264898964,51.454625192114541</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>TENNA</name>
+	<ExtendedData><SchemaData schemaUrl="#all_waypoints_wgs84_kml">
+		<SimpleData name="id">5</SimpleData>
+		<SimpleData name="alt">-0.9</SimpleData>
+		<SimpleData name="lon">-2.627872</SimpleData>
+		<SimpleData name="lat">51.454709</SimpleData>
+		<SimpleData name="instr">Verify 15&lt;R&lt;20</SimpleData>
+		<SimpleData name="lbl_ofs_x">25.0</SimpleData>
+		<SimpleData name="lbl_ofs_y">-11.0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-2.627872153045627,51.454708564150877</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
