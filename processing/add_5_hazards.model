@@ -1,0 +1,386 @@
+{
+    "values": {
+        "inputs": {
+            "VECTORLAYER_HAZARDLAYER4": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 1000.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZARDLAYER4", 
+                            "shapetype": [
+                                1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": true, 
+                            "description": "hazard layer 4"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZARDLAYER5": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 1220.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZARDLAYER5", 
+                            "shapetype": [
+                                1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": true, 
+                            "description": "hazard layer 5"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZARDLAYER2": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 560.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZARDLAYER2", 
+                            "shapetype": [
+                                1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": true, 
+                            "description": "hazard layer 2"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZARDLAYER3": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 780.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZARDLAYER3", 
+                            "shapetype": [
+                                1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": true, 
+                            "description": "hazard layer 3"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZARDLAYER1": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 340.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZARDLAYER1", 
+                            "shapetype": [
+                                1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "hazard layer 1"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_ROI": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 120.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_ROI", 
+                            "shapetype": [
+                                2
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "roi"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }
+        }, 
+        "helpContent": {}, 
+        "group": "Drones", 
+        "name": "Add 5 hazards", 
+        "algs": {
+            "MODELERADD_HAZ_2": {
+                "values": {
+                    "name": "MODELERADD_HAZ_2", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 360.0, 
+                            "x": 560.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "VECTORLAYER_FIRSTHAZARDLAYER": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZARDLAYER3"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_ROILAYER": {
+                            "values": {
+                                "name": "VECTORLAYER_ROI"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_HAZARDSSOFAR": {
+                            "values": {
+                                "alg": "MODELERADD_HAZ_1", 
+                                "output": "OUTPUT_ALGQGISMERGEVECTORLAYERS_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:add_haz", 
+                    "description": "Add hazard layer 3"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERINIT_HAZ_1": {
+                "values": {
+                    "name": "MODELERINIT_HAZ_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 160.0, 
+                            "x": 120.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "VECTORLAYER_FIRSTHAZARDLAYER": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZARDLAYER1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_ROILAYER": {
+                            "values": {
+                                "name": "VECTORLAYER_ROI"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:init_haz", 
+                    "description": "First hazard layer"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERADD_HAZ_1": {
+                "values": {
+                    "name": "MODELERADD_HAZ_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 260.0, 
+                            "x": 340.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "VECTORLAYER_FIRSTHAZARDLAYER": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZARDLAYER2"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_ROILAYER": {
+                            "values": {
+                                "name": "VECTORLAYER_ROI"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_HAZARDSSOFAR": {
+                            "values": {
+                                "alg": "MODELERINIT_HAZ_1", 
+                                "output": "OUTPUT_LAYER_ALGQGISADDFIELDTOATTRIBUTESTABLE_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:add_haz", 
+                    "description": "Add hazard layer 2"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERADD_HAZ_4": {
+                "values": {
+                    "name": "MODELERADD_HAZ_4", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "OUTPUT_ALGQGISMERGEVECTORLAYERS_1": {
+                            "values": {
+                                "description": "all_hazards", 
+                                "pos": {
+                                    "values": {
+                                        "y": 605.0, 
+                                        "x": 1200.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 560.0, 
+                            "x": 1000.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "VECTORLAYER_FIRSTHAZARDLAYER": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZARDLAYER5"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_ROILAYER": {
+                            "values": {
+                                "name": "VECTORLAYER_ROI"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_HAZARDSSOFAR": {
+                            "values": {
+                                "alg": "MODELERADD_HAZ_3", 
+                                "output": "OUTPUT_ALGQGISMERGEVECTORLAYERS_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:add_haz", 
+                    "description": "Add hazard layer 5"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERADD_HAZ_3": {
+                "values": {
+                    "name": "MODELERADD_HAZ_3", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 460.0, 
+                            "x": 780.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "VECTORLAYER_FIRSTHAZARDLAYER": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZARDLAYER4"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_ROILAYER": {
+                            "values": {
+                                "name": "VECTORLAYER_ROI"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_HAZARDSSOFAR": {
+                            "values": {
+                                "alg": "MODELERADD_HAZ_2", 
+                                "output": "OUTPUT_ALGQGISMERGEVECTORLAYERS_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:add_haz", 
+                    "description": "Add hazard layer 4"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }
+        }
+    }, 
+    "class": "processing.modeler.ModelerAlgorithm.ModelerAlgorithm"
+}
