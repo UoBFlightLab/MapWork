@@ -1,11 +1,65 @@
 {
     "values": {
         "inputs": {
-            "VECTORLAYER_FIRSTHAZARDLAYER": {
+            "VECTORLAYER_ROI": {
                 "values": {
                     "pos": {
                         "values": {
-                            "y": 60.0, 
+                            "y": 67.0, 
+                            "x": 348.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_ROI", 
+                            "shapetype": [
+                                -1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "ROI"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZARDS2": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 116.0, 
+                            "x": 520.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZARDS2", 
+                            "shapetype": [
+                                -1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "hazards2"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZARDS1": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 33.0, 
                             "x": 120.0
                         }, 
                         "class": "point"
@@ -13,69 +67,15 @@
                     "param": {
                         "values": {
                             "isAdvanced": false, 
-                            "name": "VECTORLAYER_FIRSTHAZARDLAYER", 
+                            "name": "VECTORLAYER_HAZARDS1", 
                             "shapetype": [
-                                1
+                                -1
                             ], 
                             "value": null, 
                             "exported": null, 
                             "hidden": false, 
                             "optional": false, 
-                            "description": "new_hazard_layer"
-                        }, 
-                        "class": "processing.core.parameters.ParameterVector"
-                    }
-                }, 
-                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
-            }, 
-            "VECTORLAYER_ROILAYER": {
-                "values": {
-                    "pos": {
-                        "values": {
-                            "y": 60.0, 
-                            "x": 340.0
-                        }, 
-                        "class": "point"
-                    }, 
-                    "param": {
-                        "values": {
-                            "isAdvanced": false, 
-                            "name": "VECTORLAYER_ROILAYER", 
-                            "shapetype": [
-                                2
-                            ], 
-                            "value": null, 
-                            "exported": null, 
-                            "hidden": false, 
-                            "optional": false, 
-                            "description": "roi_layer"
-                        }, 
-                        "class": "processing.core.parameters.ParameterVector"
-                    }
-                }, 
-                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
-            }, 
-            "VECTORLAYER_HAZARDSSOFAR": {
-                "values": {
-                    "pos": {
-                        "values": {
-                            "y": 60.0, 
-                            "x": 560.0
-                        }, 
-                        "class": "point"
-                    }, 
-                    "param": {
-                        "values": {
-                            "isAdvanced": false, 
-                            "name": "VECTORLAYER_HAZARDSSOFAR", 
-                            "shapetype": [
-                                1
-                            ], 
-                            "value": null, 
-                            "exported": null, 
-                            "hidden": false, 
-                            "optional": false, 
-                            "description": "hazards_so_far"
+                            "description": "hazards1"
                         }, 
                         "class": "processing.core.parameters.ParameterVector"
                     }
@@ -85,13 +85,14 @@
         }, 
         "helpContent": {}, 
         "group": "Drones", 
-        "name": "Add hazard layer", 
+        "name": "Merge hazard layers", 
         "algs": {
-            "QGISINTERSECTION_1": {
+            "MODELERBUFFER_HAZARDS_1": {
                 "values": {
-                    "name": "QGISINTERSECTION_1", 
+                    "name": "MODELERBUFFER_HAZARDS_1", 
                     "paramsFolded": true, 
                     "outputs": {}, 
+                    "outputsFolded": true, 
                     "pos": {
                         "values": {
                             "y": 160.0, 
@@ -99,25 +100,58 @@
                         }, 
                         "class": "point"
                     }, 
-                    "outputsFolded": true, 
                     "dependencies": [], 
                     "params": {
-                        "INPUT2": {
+                        "VECTORLAYER_HAZARDINPUTLAYER": {
                             "values": {
-                                "name": "VECTORLAYER_ROILAYER"
+                                "name": "VECTORLAYER_HAZARDS1"
                             }, 
                             "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
                         }, 
-                        "INPUT": {
+                        "VECTORLAYER_ROIFORHAZARDS": {
                             "values": {
-                                "name": "VECTORLAYER_FIRSTHAZARDLAYER"
+                                "name": "VECTORLAYER_ROI"
                             }, 
                             "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
                         }
                     }, 
                     "active": true, 
-                    "consoleName": "qgis:intersection", 
-                    "description": "Intersection"
+                    "consoleName": "modeler:buffer_hazards", 
+                    "description": "Buffer nearby hazards"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERBUFFER_HAZARDS_2": {
+                "values": {
+                    "name": "MODELERBUFFER_HAZARDS_2", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 260.0, 
+                            "x": 340.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "VECTORLAYER_HAZARDINPUTLAYER": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZARDS2"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_ROIFORHAZARDS": {
+                            "values": {
+                                "name": "VECTORLAYER_ROI"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:buffer_hazards", 
+                    "description": "Buffer nearby hazards"
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.Algorithm"
             }, 
@@ -128,11 +162,11 @@
                     "outputs": {
                         "OUTPUT": {
                             "values": {
-                                "description": "hazards_oi", 
+                                "description": "Merged Buffers", 
                                 "pos": {
                                     "values": {
-                                        "y": 305.0, 
-                                        "x": 540.0
+                                        "y": 405.0, 
+                                        "x": 760.0
                                     }, 
                                     "class": "point"
                                 }
@@ -140,28 +174,29 @@
                             "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
                         }
                     }, 
+                    "outputsFolded": true, 
                     "pos": {
                         "values": {
-                            "y": 260.0, 
-                            "x": 340.0
+                            "y": 360.0, 
+                            "x": 560.0
                         }, 
                         "class": "point"
                     }, 
-                    "outputsFolded": true, 
                     "dependencies": [], 
                     "params": {
                         "LAYER2": {
                             "values": {
-                                "alg": "QGISINTERSECTION_1", 
-                                "output": "OUTPUT"
+                                "alg": "MODELERBUFFER_HAZARDS_2", 
+                                "output": "OUTPUT_ALGQGISFIXEDDISTANCEBUFFER_1"
                             }, 
                             "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
                         }, 
                         "LAYER1": {
                             "values": {
-                                "name": "VECTORLAYER_HAZARDSSOFAR"
+                                "alg": "MODELERBUFFER_HAZARDS_1", 
+                                "output": "OUTPUT_ALGQGISFIXEDDISTANCEBUFFER_1"
                             }, 
-                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
                         }
                     }, 
                     "active": true, 

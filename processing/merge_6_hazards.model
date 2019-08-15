@@ -1,0 +1,436 @@
+{
+    "values": {
+        "inputs": {
+            "VECTORLAYER_ROI": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 39.0, 
+                            "x": 521.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_ROI", 
+                            "shapetype": [
+                                2
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "roi"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZ1": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 111.0, 
+                            "x": 180.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZ1", 
+                            "shapetype": [
+                                -1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "haz1"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZ2": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 184.0, 
+                            "x": 179.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZ2", 
+                            "shapetype": [
+                                -1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "haz2"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZ3": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 266.0, 
+                            "x": 169.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZ3", 
+                            "shapetype": [
+                                -1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "haz3"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZ4": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 336.0, 
+                            "x": 177.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZ4", 
+                            "shapetype": [
+                                -1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "haz4"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZ5": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 455.0, 
+                            "x": 166.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZ5", 
+                            "shapetype": [
+                                -1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "haz5"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZ6": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 522.0, 
+                            "x": 174.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZ6", 
+                            "shapetype": [
+                                -1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "haz6"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }
+        }, 
+        "helpContent": {}, 
+        "group": "Drones", 
+        "name": "Merge 6 hazards", 
+        "algs": {
+            "MODELERMERGE_2_HAZARDS_2": {
+                "values": {
+                    "name": "MODELERMERGE_2_HAZARDS_2", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 403.0, 
+                            "x": 487.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "VECTORLAYER_ROI": {
+                            "values": {
+                                "name": "VECTORLAYER_ROI"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_HAZARDS2": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZ3"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_HAZARDS1": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZ4"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:merge_2_hazards", 
+                    "description": "Merge hazard layers 3+4"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERMERGE_2_HAZARDS_3": {
+                "values": {
+                    "name": "MODELERMERGE_2_HAZARDS_3", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 614.0, 
+                            "x": 485.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "VECTORLAYER_ROI": {
+                            "values": {
+                                "name": "VECTORLAYER_ROI"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_HAZARDS2": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZ5"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_HAZARDS1": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZ6"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:merge_2_hazards", 
+                    "description": "Merge hazard layers 5+6"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERMERGE_2_HAZARDS_1": {
+                "values": {
+                    "name": "MODELERMERGE_2_HAZARDS_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 244.0, 
+                            "x": 487.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "VECTORLAYER_ROI": {
+                            "values": {
+                                "name": "VECTORLAYER_ROI"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_HAZARDS2": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZ1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_HAZARDS1": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZ2"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:merge_2_hazards", 
+                    "description": "Merge hazard layers 1+2"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "QGISDELETEDUPLICATEGEOMETRIES_1": {
+                "values": {
+                    "name": "QGISDELETEDUPLICATEGEOMETRIES_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "OUTPUT": {
+                            "values": {
+                                "description": "Combined hazard buffers", 
+                                "pos": {
+                                    "values": {
+                                        "y": 859.0, 
+                                        "x": 1459.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 814.0, 
+                            "x": 1259.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "INPUT": {
+                            "values": {
+                                "alg": "QGISMERGEVECTORLAYERS_2", 
+                                "output": "OUTPUT"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "qgis:deleteduplicategeometries", 
+                    "description": "Delete duplicate geometries"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "QGISMERGEVECTORLAYERS_1": {
+                "values": {
+                    "name": "QGISMERGEVECTORLAYERS_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 323.0, 
+                            "x": 819.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "LAYER2": {
+                            "values": {
+                                "alg": "MODELERMERGE_2_HAZARDS_2", 
+                                "output": "OUTPUT_ALGQGISMERGEVECTORLAYERS_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "LAYER1": {
+                            "values": {
+                                "alg": "MODELERMERGE_2_HAZARDS_1", 
+                                "output": "OUTPUT_ALGQGISMERGEVECTORLAYERS_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "qgis:mergevectorlayers", 
+                    "description": "Merge vector layers 1-4"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "QGISMERGEVECTORLAYERS_2": {
+                "values": {
+                    "name": "QGISMERGEVECTORLAYERS_2", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 714.0, 
+                            "x": 1039.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "LAYER2": {
+                            "values": {
+                                "alg": "MODELERMERGE_2_HAZARDS_3", 
+                                "output": "OUTPUT_ALGQGISMERGEVECTORLAYERS_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "LAYER1": {
+                            "values": {
+                                "alg": "QGISMERGEVECTORLAYERS_1", 
+                                "output": "OUTPUT"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "qgis:mergevectorlayers", 
+                    "description": "Merge vector layers 1-6"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }
+        }
+    }, 
+    "class": "processing.modeler.ModelerAlgorithm.ModelerAlgorithm"
+}

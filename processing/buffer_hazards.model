@@ -1,34 +1,34 @@
 {
     "values": {
         "inputs": {
-            "VECTORLAYER_FIRSTHAZARDLAYER": {
+            "VECTORLAYER_HAZARDINPUTLAYER": {
                 "values": {
                     "pos": {
                         "values": {
                             "y": 60.0, 
-                            "x": 119.0
+                            "x": 120.0
                         }, 
                         "class": "point"
                     }, 
                     "param": {
                         "values": {
                             "isAdvanced": false, 
-                            "name": "VECTORLAYER_FIRSTHAZARDLAYER", 
+                            "name": "VECTORLAYER_HAZARDINPUTLAYER", 
                             "shapetype": [
-                                1
+                                -1
                             ], 
                             "value": null, 
                             "exported": null, 
                             "hidden": false, 
                             "optional": false, 
-                            "description": "first_hazard_layer"
+                            "description": "Hazard Input Layer"
                         }, 
                         "class": "processing.core.parameters.ParameterVector"
                     }
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
             }, 
-            "VECTORLAYER_ROILAYER": {
+            "VECTORLAYER_ROIFORHAZARDS": {
                 "values": {
                     "pos": {
                         "values": {
@@ -40,7 +40,7 @@
                     "param": {
                         "values": {
                             "isAdvanced": false, 
-                            "name": "VECTORLAYER_ROILAYER", 
+                            "name": "VECTORLAYER_ROIFORHAZARDS", 
                             "shapetype": [
                                 2
                             ], 
@@ -48,7 +48,7 @@
                             "exported": null, 
                             "hidden": false, 
                             "optional": false, 
-                            "description": "roi_layer"
+                            "description": "ROI for Hazards"
                         }, 
                         "class": "processing.core.parameters.ParameterVector"
                     }
@@ -58,13 +58,14 @@
         }, 
         "helpContent": {}, 
         "group": "Drones", 
-        "name": "First hazard layer", 
+        "name": "Buffer nearby hazards", 
         "algs": {
             "QGISINTERSECTION_1": {
                 "values": {
                     "name": "QGISINTERSECTION_1", 
                     "paramsFolded": true, 
                     "outputs": {}, 
+                    "outputsFolded": true, 
                     "pos": {
                         "values": {
                             "y": 160.0, 
@@ -72,18 +73,17 @@
                         }, 
                         "class": "point"
                     }, 
-                    "outputsFolded": true, 
                     "dependencies": [], 
                     "params": {
                         "INPUT2": {
                             "values": {
-                                "name": "VECTORLAYER_ROILAYER"
+                                "name": "VECTORLAYER_ROIFORHAZARDS"
                             }, 
                             "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
                         }, 
                         "INPUT": {
                             "values": {
-                                "name": "VECTORLAYER_FIRSTHAZARDLAYER"
+                                "name": "VECTORLAYER_HAZARDINPUTLAYER"
                             }, 
                             "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
                         }
@@ -94,14 +94,14 @@
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.Algorithm"
             }, 
-            "QGISADDFIELDTOATTRIBUTESTABLE_1": {
+            "QGISFIXEDDISTANCEBUFFER_1": {
                 "values": {
-                    "name": "QGISADDFIELDTOATTRIBUTESTABLE_1", 
+                    "name": "QGISFIXEDDISTANCEBUFFER_1", 
                     "paramsFolded": true, 
                     "outputs": {
-                        "OUTPUT_LAYER": {
+                        "OUTPUT": {
                             "values": {
-                                "description": "hazards1", 
+                                "description": "Hazard Buffers", 
                                 "pos": {
                                     "values": {
                                         "y": 305.0, 
@@ -113,6 +113,7 @@
                             "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
                         }
                     }, 
+                    "outputsFolded": true, 
                     "pos": {
                         "values": {
                             "y": 260.0, 
@@ -120,24 +121,22 @@
                         }, 
                         "class": "point"
                     }, 
-                    "outputsFolded": true, 
                     "dependencies": [], 
                     "params": {
-                        "FIELD_TYPE": 0, 
-                        "FIELD_NAME": "Marshal", 
-                        "INPUT_LAYER": {
+                        "INPUT": {
                             "values": {
                                 "alg": "QGISINTERSECTION_1", 
                                 "output": "OUTPUT"
                             }, 
                             "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
                         }, 
-                        "FIELD_PRECISION": 0.0, 
-                        "FIELD_LENGTH": 10.0
+                        "SEGMENTS": 18.0, 
+                        "DISSOLVE": false, 
+                        "DISTANCE": 50.0
                     }, 
                     "active": true, 
-                    "consoleName": "qgis:addfieldtoattributestable", 
-                    "description": "Add field to attributes table"
+                    "consoleName": "qgis:fixeddistancebuffer", 
+                    "description": "Fixed distance buffer"
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.Algorithm"
             }

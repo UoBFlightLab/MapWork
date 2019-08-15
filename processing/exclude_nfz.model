@@ -21,14 +21,41 @@
                             "exported": null, 
                             "hidden": false, 
                             "optional": false, 
-                            "description": "flight_region"
+                            "description": "Flight Region"
                         }, 
                         "class": "processing.core.parameters.ParameterVector"
                     }
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
             }, 
-            "VECTORLAYER_HAZARDSLAYER": {
+            "VECTORLAYER_CONTROLLEDHAZARDBUFFERS": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 560.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_CONTROLLEDHAZARDBUFFERS", 
+                            "shapetype": [
+                                2
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Controlled Hazard Buffers"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZARDBUFFERS": {
                 "values": {
                     "pos": {
                         "values": {
@@ -40,42 +67,17 @@
                     "param": {
                         "values": {
                             "isAdvanced": false, 
-                            "name": "VECTORLAYER_HAZARDSLAYER", 
+                            "name": "VECTORLAYER_HAZARDBUFFERS", 
                             "shapetype": [
-                                -1
+                                2
                             ], 
                             "value": null, 
                             "exported": null, 
                             "hidden": false, 
                             "optional": false, 
-                            "description": "hazards_layer"
+                            "description": "Uncontrolled Hazard Buffers"
                         }, 
                         "class": "processing.core.parameters.ParameterVector"
-                    }
-                }, 
-                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
-            }, 
-            "TABLEFIELD_MARSHALATTRIBUTE": {
-                "values": {
-                    "pos": {
-                        "values": {
-                            "y": 60.0, 
-                            "x": 560.0
-                        }, 
-                        "class": "point"
-                    }, 
-                    "param": {
-                        "values": {
-                            "isAdvanced": false, 
-                            "name": "TABLEFIELD_MARSHALATTRIBUTE", 
-                            "parent": "VECTORLAYER_HAZARDSLAYER", 
-                            "datatype": -1, 
-                            "value": null, 
-                            "hidden": false, 
-                            "optional": false, 
-                            "description": "marshal_attribute"
-                        }, 
-                        "class": "processing.core.parameters.ParameterTableField"
                     }
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
@@ -83,44 +85,8 @@
         }, 
         "helpContent": {}, 
         "group": "Drones", 
-        "name": "Exclude NFZ from flight region", 
+        "name": "Exclude NFZ and find Control Zone", 
         "algs": {
-            "QGISEXTRACTBYATTRIBUTE_1": {
-                "values": {
-                    "name": "QGISEXTRACTBYATTRIBUTE_1", 
-                    "paramsFolded": true, 
-                    "outputs": {}, 
-                    "outputsFolded": true, 
-                    "pos": {
-                        "values": {
-                            "y": 160.0, 
-                            "x": 120.0
-                        }, 
-                        "class": "point"
-                    }, 
-                    "dependencies": [], 
-                    "params": {
-                        "OPERATOR": 0, 
-                        "INPUT": {
-                            "values": {
-                                "name": "VECTORLAYER_HAZARDSLAYER"
-                            }, 
-                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
-                        }, 
-                        "VALUE": "0", 
-                        "FIELD": {
-                            "values": {
-                                "name": "TABLEFIELD_MARSHALATTRIBUTE"
-                            }, 
-                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
-                        }
-                    }, 
-                    "active": true, 
-                    "consoleName": "qgis:extractbyattribute", 
-                    "description": "Extract by attribute"
-                }, 
-                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
-            }, 
             "QGISDIFFERENCE_1": {
                 "values": {
                     "name": "QGISDIFFERENCE_1", 
@@ -128,11 +94,11 @@
                     "outputs": {
                         "OUTPUT": {
                             "values": {
-                                "description": "flight_region_exc_nfz", 
+                                "description": "Flight Region exc NFZ", 
                                 "pos": {
                                     "values": {
-                                        "y": 405.0, 
-                                        "x": 760.0
+                                        "y": 229.0, 
+                                        "x": 485.0
                                     }, 
                                     "class": "point"
                                 }
@@ -142,8 +108,8 @@
                     }, 
                     "pos": {
                         "values": {
-                            "y": 360.0, 
-                            "x": 560.0
+                            "y": 183.0, 
+                            "x": 266.0
                         }, 
                         "class": "point"
                     }, 
@@ -158,10 +124,9 @@
                         }, 
                         "OVERLAY": {
                             "values": {
-                                "alg": "QGISFIXEDDISTANCEBUFFER_1", 
-                                "output": "OUTPUT"
+                                "name": "VECTORLAYER_HAZARDBUFFERS"
                             }, 
-                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
                         }
                     }, 
                     "active": true, 
@@ -170,35 +135,83 @@
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.Algorithm"
             }, 
-            "QGISFIXEDDISTANCEBUFFER_1": {
+            "QGISDISSOLVE_1": {
                 "values": {
-                    "name": "QGISFIXEDDISTANCEBUFFER_1", 
+                    "name": "QGISDISSOLVE_1", 
                     "paramsFolded": true, 
                     "outputs": {}, 
+                    "outputsFolded": true, 
                     "pos": {
                         "values": {
-                            "y": 260.0, 
-                            "x": 340.0
+                            "y": 313.0, 
+                            "x": 585.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "INPUT": {
+                            "values": {
+                                "name": "VECTORLAYER_CONTROLLEDHAZARDBUFFERS"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "DISSOLVE_ALL": true, 
+                        "FIELD": "0"
+                    }, 
+                    "active": true, 
+                    "consoleName": "qgis:dissolve", 
+                    "description": "Dissolve"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "QGISINTERSECTION_1": {
+                "values": {
+                    "name": "QGISINTERSECTION_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "OUTPUT": {
+                            "values": {
+                                "description": "Control zone", 
+                                "pos": {
+                                    "values": {
+                                        "y": 497.0, 
+                                        "x": 829.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "pos": {
+                        "values": {
+                            "y": 452.0, 
+                            "x": 629.0
                         }, 
                         "class": "point"
                     }, 
                     "outputsFolded": true, 
                     "dependencies": [], 
                     "params": {
-                        "INPUT": {
+                        "INPUT2": {
                             "values": {
-                                "alg": "QGISEXTRACTBYATTRIBUTE_1", 
+                                "alg": "QGISDIFFERENCE_1", 
                                 "output": "OUTPUT"
                             }, 
                             "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
                         }, 
-                        "SEGMENTS": 18.0, 
-                        "DISSOLVE": true, 
-                        "DISTANCE": 50.0
+                        "INPUT": {
+                            "values": {
+                                "alg": "QGISDISSOLVE_1", 
+                                "output": "OUTPUT"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
                     }, 
                     "active": true, 
-                    "consoleName": "qgis:fixeddistancebuffer", 
-                    "description": "Fixed distance buffer"
+                    "consoleName": "qgis:intersection", 
+                    "description": "Intersection"
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.Algorithm"
             }

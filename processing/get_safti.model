@@ -15,13 +15,13 @@
                             "isAdvanced": false, 
                             "name": "VECTORLAYER_ALLHAZARDS", 
                             "shapetype": [
-                                1
+                                2
                             ], 
                             "value": null, 
                             "exported": null, 
                             "hidden": false, 
                             "optional": false, 
-                            "description": "all_hazards"
+                            "description": "Hazard Buffers"
                         }, 
                         "class": "processing.core.parameters.ParameterVector"
                     }
@@ -79,6 +79,7 @@
                             "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
                         }
                     }, 
+                    "outputsFolded": true, 
                     "pos": {
                         "values": {
                             "y": 260.0, 
@@ -86,7 +87,6 @@
                         }, 
                         "class": "point"
                     }, 
-                    "outputsFolded": true, 
                     "dependencies": [], 
                     "params": {
                         "INPUT": {
@@ -97,10 +97,9 @@
                         }, 
                         "OVERLAY": {
                             "values": {
-                                "alg": "QGISFIXEDDISTANCEBUFFER_1", 
-                                "output": "OUTPUT"
+                                "name": "VECTORLAYER_ALLHAZARDS"
                             }, 
-                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
                         }
                     }, 
                     "active": true, 
@@ -114,7 +113,6 @@
                     "name": "QGISMULTIPARTTOSINGLEPARTS_1", 
                     "paramsFolded": true, 
                     "outputs": {}, 
-                    "outputsFolded": true, 
                     "pos": {
                         "values": {
                             "y": 360.0, 
@@ -122,6 +120,7 @@
                         }, 
                         "class": "point"
                     }, 
+                    "outputsFolded": true, 
                     "dependencies": [], 
                     "params": {
                         "INPUT": {
@@ -135,51 +134,6 @@
                     "active": true, 
                     "consoleName": "qgis:multiparttosingleparts", 
                     "description": "Multipart to singleparts"
-                }, 
-                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
-            }, 
-            "QGISFIXEDDISTANCEBUFFER_1": {
-                "values": {
-                    "name": "QGISFIXEDDISTANCEBUFFER_1", 
-                    "paramsFolded": true, 
-                    "outputs": {
-                        "OUTPUT": {
-                            "values": {
-                                "description": "all_hazard_buffs", 
-                                "pos": {
-                                    "values": {
-                                        "y": 205.0, 
-                                        "x": 320.0
-                                    }, 
-                                    "class": "point"
-                                }
-                            }, 
-                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
-                        }
-                    }, 
-                    "pos": {
-                        "values": {
-                            "y": 160.0, 
-                            "x": 120.0
-                        }, 
-                        "class": "point"
-                    }, 
-                    "outputsFolded": true, 
-                    "dependencies": [], 
-                    "params": {
-                        "INPUT": {
-                            "values": {
-                                "name": "VECTORLAYER_ALLHAZARDS"
-                            }, 
-                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
-                        }, 
-                        "SEGMENTS": 18.0, 
-                        "DISSOLVE": true, 
-                        "DISTANCE": 50.0
-                    }, 
-                    "active": true, 
-                    "consoleName": "qgis:fixeddistancebuffer", 
-                    "description": "Fixed distance buffer"
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.Algorithm"
             }, 
@@ -202,7 +156,6 @@
                             "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
                         }
                     }, 
-                    "outputsFolded": true, 
                     "pos": {
                         "values": {
                             "y": 460.0, 
@@ -210,6 +163,7 @@
                         }, 
                         "class": "point"
                     }, 
+                    "outputsFolded": true, 
                     "dependencies": [], 
                     "params": {
                         "INPUT_LAYER": {
