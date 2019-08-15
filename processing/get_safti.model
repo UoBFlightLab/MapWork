@@ -109,9 +109,9 @@
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.Algorithm"
             }, 
-            "QGISPOLYGONSTOLINES_1": {
+            "QGISMULTIPARTTOSINGLEPARTS_1": {
                 "values": {
-                    "name": "QGISPOLYGONSTOLINES_1", 
+                    "name": "QGISMULTIPARTTOSINGLEPARTS_1", 
                     "paramsFolded": true, 
                     "outputs": {}, 
                     "outputsFolded": true, 
@@ -133,8 +133,8 @@
                         }
                     }, 
                     "active": true, 
-                    "consoleName": "qgis:polygonstolines", 
-                    "description": "Polygons to lines"
+                    "consoleName": "qgis:multiparttosingleparts", 
+                    "description": "Multipart to singleparts"
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.Algorithm"
             }, 
@@ -183,14 +183,14 @@
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.Algorithm"
             }, 
-            "QGISCREATEPOINTSALONGLINES_1": {
+            "QGISPOLYGONCENTROIDS_1": {
                 "values": {
-                    "name": "QGISCREATEPOINTSALONGLINES_1", 
+                    "name": "QGISPOLYGONCENTROIDS_1", 
                     "paramsFolded": true, 
                     "outputs": {
-                        "output": {
+                        "OUTPUT_LAYER": {
                             "values": {
-                                "description": "safe_points", 
+                                "description": "safety_points", 
                                 "pos": {
                                     "values": {
                                         "y": 505.0, 
@@ -212,20 +212,17 @@
                     }, 
                     "dependencies": [], 
                     "params": {
-                        "distance": 100.0, 
-                        "endpoint": 0.0, 
-                        "lines": {
+                        "INPUT_LAYER": {
                             "values": {
-                                "alg": "QGISPOLYGONSTOLINES_1", 
+                                "alg": "QGISMULTIPARTTOSINGLEPARTS_1", 
                                 "output": "OUTPUT"
                             }, 
                             "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
-                        }, 
-                        "startpoint": 0.0
+                        }
                     }, 
                     "active": true, 
-                    "consoleName": "qgis:createpointsalonglines", 
-                    "description": "Create points along lines"
+                    "consoleName": "qgis:polygoncentroids", 
+                    "description": "Polygon centroids"
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.Algorithm"
             }

@@ -1,0 +1,359 @@
+{
+    "values": {
+        "inputs": {
+            "NUMBER_EXPANSION": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 560.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "NUMBER_EXPANSION", 
+                            "min": 50, 
+                            "default": 50, 
+                            "max": 500, 
+                            "value": null, 
+                            "hidden": false, 
+                            "isInteger": true, 
+                            "description": "expansion"
+                        }, 
+                        "class": "processing.core.parameters.ParameterNumber"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_WAYPOINTS": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 120.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_WAYPOINTS", 
+                            "shapetype": [
+                                0
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "waypoints"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "VECTORLAYER_HAZARDS": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 340.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "VECTORLAYER_HAZARDS", 
+                            "shapetype": [
+                                1
+                            ], 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "hazards"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "TABLEFIELD_MARSHALATTRIBUTE": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 780.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "TABLEFIELD_MARSHALATTRIBUTE", 
+                            "parent": "VECTORLAYER_HAZARDS", 
+                            "datatype": -1, 
+                            "value": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "marshal_attribute"
+                        }, 
+                        "class": "processing.core.parameters.ParameterTableField"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }
+        }, 
+        "helpContent": {}, 
+        "group": "Drones", 
+        "name": "Workflow", 
+        "algs": {
+            "MODELERROI_1": {
+                "values": {
+                    "name": "MODELERROI_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "OUTPUT_ALGQGISFIXEDDISTANCEBUFFER_2": {
+                            "values": {
+                                "description": "roi", 
+                                "pos": {
+                                    "values": {
+                                        "y": 204.0, 
+                                        "x": 538.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }, 
+                        "OUTPUT_ALGQGISFIXEDDISTANCEBUFFER_1": {
+                            "values": {
+                                "description": "flight_region", 
+                                "pos": {
+                                    "values": {
+                                        "y": 158.0, 
+                                        "x": 540.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "pos": {
+                        "values": {
+                            "y": 160.0, 
+                            "x": 120.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "outputsFolded": true, 
+                    "dependencies": [], 
+                    "params": {
+                        "NUMBER_EXPANSION": {
+                            "values": {
+                                "name": "NUMBER_EXPANSION"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_WAYPOINTS": {
+                            "values": {
+                                "name": "VECTORLAYER_WAYPOINTS"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:roi", 
+                    "description": "ROI from waypoints"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERINIT_HAZ_1": {
+                "values": {
+                    "name": "MODELERINIT_HAZ_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "OUTPUT_LAYER_ALGQGISADDFIELDTOATTRIBUTESTABLE_1": {
+                            "values": {
+                                "description": "nearby_hazards", 
+                                "pos": {
+                                    "values": {
+                                        "y": 305.0, 
+                                        "x": 540.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "pos": {
+                        "values": {
+                            "y": 260.0, 
+                            "x": 340.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "outputsFolded": true, 
+                    "dependencies": [], 
+                    "params": {
+                        "VECTORLAYER_FIRSTHAZARDLAYER": {
+                            "values": {
+                                "name": "VECTORLAYER_HAZARDS"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "VECTORLAYER_ROILAYER": {
+                            "values": {
+                                "alg": "MODELERROI_1", 
+                                "output": "OUTPUT_ALGQGISFIXEDDISTANCEBUFFER_2"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:init_haz", 
+                    "description": "First hazard layer"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERGET_SAFTI_1": {
+                "values": {
+                    "name": "MODELERGET_SAFTI_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "OUTPUT_LAYER_ALGQGISPOLYGONCENTROIDS_1": {
+                            "values": {
+                                "description": "safe_points", 
+                                "pos": {
+                                    "values": {
+                                        "y": 368.0, 
+                                        "x": 910.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }, 
+                        "OUTPUT_ALGQGISFIXEDDISTANCEBUFFER_1": {
+                            "values": {
+                                "description": "all_buffers", 
+                                "pos": {
+                                    "values": {
+                                        "y": 332.0, 
+                                        "x": 910.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }, 
+                        "OUTPUT_ALGQGISDIFFERENCE_1": {
+                            "values": {
+                                "description": "safe_region", 
+                                "pos": {
+                                    "values": {
+                                        "y": 410.0, 
+                                        "x": 914.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "pos": {
+                        "values": {
+                            "y": 360.0, 
+                            "x": 560.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "outputsFolded": true, 
+                    "dependencies": [], 
+                    "params": {
+                        "VECTORLAYER_ALLHAZARDS": {
+                            "values": {
+                                "alg": "MODELERINIT_HAZ_1", 
+                                "output": "OUTPUT_LAYER_ALGQGISADDFIELDTOATTRIBUTESTABLE_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "VECTORLAYER_FLIGHTREGION": {
+                            "values": {
+                                "alg": "MODELERROI_1", 
+                                "output": "OUTPUT_ALGQGISFIXEDDISTANCEBUFFER_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:get_safti", 
+                    "description": "Find safe region"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELEREXCLUDE_NFZ_1": {
+                "values": {
+                    "name": "MODELEREXCLUDE_NFZ_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "OUTPUT_ALGQGISDIFFERENCE_1": {
+                            "values": {
+                                "description": "flight_region_exc_nfz", 
+                                "pos": {
+                                    "values": {
+                                        "y": 622.0, 
+                                        "x": 823.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "pos": {
+                        "values": {
+                            "y": 569.0, 
+                            "x": 629.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "outputsFolded": true, 
+                    "dependencies": [], 
+                    "params": {
+                        "VECTORLAYER_FLIGHTREGION": {
+                            "values": {
+                                "alg": "MODELERROI_1", 
+                                "output": "OUTPUT_ALGQGISFIXEDDISTANCEBUFFER_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "VECTORLAYER_HAZARDSLAYER": {
+                            "values": {
+                                "alg": "MODELERINIT_HAZ_1", 
+                                "output": "OUTPUT_LAYER_ALGQGISADDFIELDTOATTRIBUTESTABLE_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "TABLEFIELD_MARSHALATTRIBUTE": {
+                            "values": {
+                                "name": "TABLEFIELD_MARSHALATTRIBUTE"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:exclude_nfz", 
+                    "description": "Exclude NFZ from flight region"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }
+        }
+    }, 
+    "class": "processing.modeler.ModelerAlgorithm.ModelerAlgorithm"
+}
