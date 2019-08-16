@@ -1,0 +1,96 @@
+********************************************************************
+
+EDINA DIGIMAP:
+
+DIGITAL DATA SUPPLY
+
+********************************************************************
+
+
+This data is distributed under licence by:
+
+    EDINA
+    University of Edinburgh
+    https://edina.ac.uk
+
+    Tel:    0131 650 3302
+    Fax:    0131 650 3308
+    Email:  digimap@ed.ac.uk
+		
+
+
+---------------------------------------------------------
+
+CONTENTS
+
+You will have received the data files listed below, each product and area has
+its own folder. Note that each data folder contains a conditions.txt file
+which states the conditions for use of the data within. These conditions can
+vary between different data products.
+
+
+
+-------------------------------------------------------------------------------
+Folder:           vml_3058682
+Extent:           353114.375, 168933.75 - 354998.125, 170053.75
+Date Ordered:     16 August 2019 at 00:00:16
+Product:          OS VectorMap® Local
+Version:          July 2018
+Format:           SHAPE
+Theme:            N/A
+Area:             2 tiles
+Tiles:
+ 
+Tile Name:        st56nw
+Extent:           350000.0, 165000.0 - 355000.0, 170000.0
+Last Amended:     10 January 2015
+  
+Tile Name:        st57sw
+Extent:           350000.0, 170000.0 - 355000.0, 175000.0
+Last Amended:     5 February 2015
+    -------------------------------------------------------------------------------
+Folder:           MasterMap Highways Network - Paths_3058681
+Extent:           353114.375, 168933.75 - 354998.125, 170053.75
+Date Ordered:     16 August 2019 at 00:00:16
+Product:          OS MasterMap Highways Network - Paths
+Version:          June 2019
+Format:           GML3
+Theme:            N/A
+Area:             National Coverage
+ -------------------------------------------------------------------------------
+Folder:           mastermap_1_to_1000_3058680
+Extent:           353114.375, 168933.75 - 354998.125, 170053.75
+Date Ordered:     16 August 2019 at 00:00:16
+Product:          OS MasterMap® Topography Layer
+Version:          May 2017
+Format:           TIFF
+Theme:            N/A
+Area:             6 tiles
+Tiles:
+ 
+Tile Name:        st5368_clipped
+Extent:           353114.375, 168933.75 - 354000.0, 169000.0
+Last Amended:     18 May 2017
+  
+Tile Name:        st5369_clipped
+Extent:           353114.375, 169000.0 - 354000.0, 170000.0
+Last Amended:     18 May 2017
+  
+Tile Name:        st5468_clipped
+Extent:           354000.0, 168933.75 - 354998.125, 169000.0
+Last Amended:     18 May 2017
+  
+Tile Name:        st5469_clipped
+Extent:           354000.0, 169000.0 - 354998.125, 170000.0
+Last Amended:     18 May 2017
+  
+Tile Name:        st5370_clipped
+Extent:           353114.375, 170000.0 - 354000.0, 170053.75
+Last Amended:     18 May 2017
+  
+Tile Name:        st5470_clipped
+Extent:           354000.0, 170000.0 - 354998.125, 170053.75
+Last Amended:     18 May 2017
+  
+The tiles listed above have been combined to create mastermap_1250_3058680.tif.
+   
